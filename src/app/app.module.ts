@@ -22,17 +22,14 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AssignmentComponent } from './issues/assignment/assignment.component';
-import { DeveloperComponent } from './issues/developer/developer.component';
-import { BugComponent } from './issues/bug/bug.component';
-import { StoryComponent } from './issues/story/story.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
@@ -43,10 +40,7 @@ import { StoryComponent } from './issues/story/story.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AssignmentComponent,
-    DeveloperComponent,
-    BugComponent,
-    StoryComponent,
+
 
   ],
   providers: [],

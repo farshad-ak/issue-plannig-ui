@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AssignmentService} from '../service/assignment/assignment.service';
 
 @Component({
-  selector: 'app-assignment',
-  templateUrl: './assignment.component.html',
-  styleUrls: ['./assignment.component.scss']
+    selector: 'app-assignment',
+    templateUrl: './assignment.component.html',
+    styleUrls: ['./assignment.component.scss']
 })
 export class AssignmentComponent implements OnInit {
 
-  constructor() { }
+    constructor(private assignmentService: AssignmentService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.assignmentService.getAssignmentSummary().subscribe((res) => {
+            console.log(res);
+        });
+    }
 
 }
