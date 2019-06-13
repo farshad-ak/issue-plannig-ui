@@ -26,8 +26,8 @@
 
                                 </mat-list-item>
                             </mat-list>
-                            <a class="btn btn-danger">Make Assignment</a>
-                            <a class="btn btn-danger">Get Assignment List</a>
+                            <a class="btn btn-danger" (click)="createAssignment()">Make Assignment</a>
+                            <a class="btn btn-danger" (click)="getAssignmentList()">Get Assignment List</a>
                         </div>
                     </div>
                 </div>
@@ -52,13 +52,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <!--                            <mat-list>-->
-                            <!--                                <mat-list-item *ngFor="let item of assignment_list | keyvalue">-->
-                            <!--                                    <p matLine> {{item.key }}  </p>-->
-                            <!--                                    <mat-list-item *ngFor="let key2 of item.value">-->
-                            <!--                                        <p matLine>  {{key2.id}} </p>-->
 
-                            <!--                                    </mat-list-item>-->
                             <div *ngFor="let item of assignment_list | keyvalue">
                                 <h2> Week Number :  {{item.key}}</h2>
                                 <table mat-table [dataSource]="item.value" class="mat-elevation-z8">
@@ -78,7 +72,7 @@
                                     <ng-container matColumnDef="developerName">
                                         <th mat-header-cell *matHeaderCellDef> Developer Name</th>
                                         <td mat-cell
-                                            *matCellDef="let element"> {{element.developerId}}
+                                            *matCellDef="let element"> {{element.developerName}}
                                         </td>
                                     </ng-container>
 
@@ -98,8 +92,7 @@
                                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                                 </table>
                             </div>
-                            <!--                                </mat-list-item>-->
-                            <!--                            </mat-list>-->
+
                         </div>
                     </div>
                 </div>

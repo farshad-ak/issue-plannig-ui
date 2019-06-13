@@ -17,4 +17,8 @@ export class AssignmentService {
     public getAssignmentList(): Observable<object> {
         return this.httpClient.get<object>('http://localhost:8765/assignments');
     }
+
+    public makeAssignment(): Observable<object> {
+        return this.httpClient.get<object>('http://localhost:8765/assignment');
+    }
 }
