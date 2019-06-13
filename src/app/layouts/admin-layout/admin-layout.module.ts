@@ -18,7 +18,7 @@ import {
     MatRippleModule,
     MatFormFieldModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule, MatProgressSpinnerModule, MatIconModule, MatTableModule, MatListModule
 } from '@angular/material';
 import {AssignmentComponent} from '../../issues/assignment/assignment.component';
 import {DeveloperComponent} from '../../issues/developer/developer.component';
@@ -39,6 +39,10 @@ import {HttpClientModule} from '@angular/common/http';
         MatSelectModule,
         MatTooltipModule,
         HttpClientModule,
+        MatProgressSpinnerModule,
+        MatIconModule,
+        MatTableModule,
+        MatListModule,
     ],
     declarations: [
         DashboardComponent,
@@ -53,6 +57,7 @@ import {HttpClientModule} from '@angular/common/http';
         DeveloperComponent,
         BugComponent,
         StoryComponent,
+
     ]
 })
 
