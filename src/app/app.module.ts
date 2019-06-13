@@ -22,6 +22,10 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AssignmentComponent } from './issues/assignment/assignment.component';
+import { DeveloperComponent } from './issues/developer/developer.component';
+import { BugComponent } from './issues/bug/bug.component';
+import { StoryComponent } from './issues/story/story.component';
 
 @NgModule({
   imports: [
@@ -39,6 +43,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    AssignmentComponent,
+    DeveloperComponent,
+    BugComponent,
+    StoryComponent,
 
   ],
   providers: [],
